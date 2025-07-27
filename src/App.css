@@ -4,6 +4,41 @@
     background-image: linear-gradient(90deg, #26b928 30%, #68bd69 100%);
 }
 
+.paginas{
+    display: flex;
+}
+
+.pagina-texto{
+    min-width: 8rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.icones{
+    display: flex;
+    align-items: center;
+}
+
+.icone{
+    margin-right: 2.5rem;
+    width: 1.5rem;
+    height: 100%;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
 .App-header{
     background-color: #b3e4b3;
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
 }

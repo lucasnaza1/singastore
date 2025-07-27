@@ -3,7 +3,7 @@ import './style.css'
 
 function Logo(){
 return(
-         <div className='logo'>
+        <div className='logo'>
         <img 
         src={logo} 
         alt= 'Singastore logo'
