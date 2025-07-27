@@ -4,8 +4,12 @@ import './style.css'
 function Logo(){
 return(
          <div className='logo'>
-        <img src={logo} alt= 'Singastore logo'></img>
-        <p>SingaStore</p>
+        <img 
+        src={logo} 
+        alt= 'Singastore logo'
+        className='logo-img'
+        ></img>
+        <p><strong>Singa</strong>Store</p>
         </div>
 )
 }
