@@ -9,7 +9,7 @@ return(
         alt= 'Singastore logo'
         className='logo-img'
         ></img>
-        <p><strong>Singa</strong>Store</p>
+        <p>Singastore</p>
         </div>
 )
 }

@@ -1,0 +1,16 @@
+.icones{
+    display: flex;
+    align-items: center;
+}
+
+.icone{
+    margin-right: 2.5rem;
+    width: 1.5rem;
+    height: 100%;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
