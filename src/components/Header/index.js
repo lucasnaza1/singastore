@@ -7,9 +7,6 @@ const HeaderContainer = styled.header`
     background-color: #b3e4b3;
     display: flex;
     justify-content: center;
-li{
-    list-style: none;
-}
 `
 
 function Header(){
