@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const rotasPaginas = ['Home', 'Lore do Singas']
+const rotasPaginas = ['Sobre o Singas', 'Sobre o desenvolvedor']
 
 const PaginasContainer = styled.ul`
      display: flex;

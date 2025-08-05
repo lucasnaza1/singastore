@@ -4,7 +4,7 @@ import Icones from '../../components/Icone'
 import styled from 'styled-components'
 
 const HeaderContainer = styled.header`
-    background-color: #b3e4b3;
+    background-color: #FFF;
     display: flex;
     justify-content: center;
 `

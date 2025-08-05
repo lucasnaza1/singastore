@@ -29,7 +29,7 @@ function Pesquisa() {
             <Titulo>Mexer, ou não mexer?</Titulo>
             <Subtitulo>Nossas poções são batidas. Nâo misturadas.</Subtitulo>
             <Input
-                placeholder='Que tal um drink?'/>
+                placeholder='O que está procurando?'/>
         </PesquisaContainer>
       
     )
