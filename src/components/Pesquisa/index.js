@@ -24,11 +24,26 @@ const Subtitulo = styled.h3`
         font-weight: 500;
         margin-bottom: 40px;
 `
+const Resultado = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    p {
+        width: 200px;
+    }
+    img {
+        width: 100px;
+    }
+    &:hover {
+        border: 1px solid white;
+    }
+`
 
 function Pesquisa() {
-    const [pocoesPesquisadas, setPocoesPesquisadas] = useState()
+    const [pocoesPesquisadas, setPocoesPesquisadas] = useState([])
 
-    console.log(pocoesPesquisadas)
         return(
         <PesquisaContainer>
             <Titulo>Mexer, ou não mexer?</Titulo>
@@ -41,6 +56,16 @@ function Pesquisa() {
                         setPocoesPesquisadas(resultadoPesquisa)
                 }}   
              />
+
+             { pocoesPesquisadas.map( pocao => (
+                <Resultado>
+                        <p>{pocao.nome}</p>
+                        <img 
+                                src={pocao.src}
+                                alt="pocao"
+                        />
+                </Resultado>
+             ) ) }
         </PesquisaContainer>
 
       
