@@ -1,5 +1,6 @@
 import Input from "../Input";
 import styled from "styled-components";
+import { useState } from 'react';
 
 const PesquisaContainer = styled.section`
         background-image: linear-gradient(90deg, #145315ff 35%, #49824aff 165%);
@@ -24,12 +25,16 @@ const Subtitulo = styled.h3`
 `
 
 function Pesquisa() {
+const [textoDigitado, setTextoDigitado] = useState('')
     return(
         <PesquisaContainer>
             <Titulo>Mexer, ou não mexer?</Titulo>
             <Subtitulo>Nossas poções são batidas. Nâo misturadas.</Subtitulo>
             <Input
-                placeholder='O que está procurando?'/>
+                placeholder='O que está procurando?'
+                onBlur= {evento => setTextoDigitado(evento.target.value)}    
+            />
+            <p>{textoDigitado}</p>
         </PesquisaContainer>
       
     )
