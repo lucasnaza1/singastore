@@ -1,9 +1,9 @@
-import pocao from '../../img/pocao.png'
+import pocaoVida from '../../img/pocao-vida.png'
+import pocaoMana from '../../img/pocao-mana.png'
+import pocaoHibrida from '../../img/pocao-hibrida.png'
 
 export const pocoes = [
- {nome: 'Vida', id: 1, src: pocao },
- {nome: 'Mana', id: 2, src: pocao },
- {nome: 'Tenacidade', id: 3, src: pocao },
- {nome: 'Magia', id: 4, src: pocao }
-
+ {nome: 'Vida', id: 1, src: pocaoVida },
+ {nome: 'Mana', id: 2, src: pocaoMana },
+ {nome: 'Hibrida', id: 3, src: pocaoHibrida },
 ]
