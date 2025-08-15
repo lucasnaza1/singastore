@@ -36,9 +36,9 @@ function UltimosLancamentos(){
                 ))} 
             </NovosItensContainer>
             <CardRecomenda
-                titulo='Você pode gostar...'
-                subtitulo='Angular 11'
-                descricao='Construindo uma aplicação com a plataforma Google'
+                titulo='Novos itens...'
+                subtitulo='Retorne mais rápido...'
+                descricao='Tempo é necessidade'
                 img={solasSimbioticas}
             />            
         </UltimosLancamentosContainer>
