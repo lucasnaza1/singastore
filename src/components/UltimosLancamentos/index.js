@@ -1,4 +1,3 @@
-import { botas } from './dadosUltimosLancamentos'
 import styled from 'styled-components'
 import { Titulo } from '../Titulo/index'
 import CardRecomenda from '../cardRecomenda/index'
@@ -10,35 +9,17 @@ const UltimosLancamentosContainer = styled.section`
     display: flex;
     flex-direction: column;
 `
-
-
-const NovosItensContainer = styled.div`
-    margin-top: 30px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    cursor: pointer;
-`
-
 function UltimosLancamentos(){
     return(
         <UltimosLancamentosContainer>
             <Titulo 
-                cor = '#ff9900ff'
+                cor = '#2b993dff'
                 > ÚLTIMOS LANÇAMENTOS
             </Titulo>
-            <NovosItensContainer>
-                 {botas.map( bota => (
-                    <img
-                        src= {bota.src}
-                        alt='botas'
-                    />
-                ))} 
-            </NovosItensContainer>
             <CardRecomenda
-                titulo='Novos itens...'
+                titulo='Solas Simbióticas'
                 subtitulo='Retorne mais rápido...'
-                descricao='Tempo é necessidade'
+                descricao='Tempo ganha partidas'
                 img={solasSimbioticas}
             />            
         </UltimosLancamentosContainer>
