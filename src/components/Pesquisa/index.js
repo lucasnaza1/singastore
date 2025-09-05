@@ -1,7 +1,7 @@
 import Input from "../Input";
 import styled from "styled-components";
-import { useState } from "react";
-import { pocoes } from './porcaoPesquisa'
+import { useEffect, useState } from "react";
+import { getPocoes } from "../../services/itens";
 
 const PesquisaContainer = styled.section`
         background-image: linear-gradient(90deg, #02511cff 35%, #2b993dff 165%);
@@ -43,32 +43,42 @@ const Resultado = styled.div`
 
 function Pesquisa() {
     const [pocoesPesquisadas, setPocoesPesquisadas] = useState([])
+    const [pocoes, setPocoes] = useState([])
 
-        return(
+    useEffect(() => {
+        fetchPocoes()
+    }, [])
+
+    async function fetchPocoes() {
+        const pocoesDaApi = await getPocoes()
+        setPocoes(pocoesDaApi || [])
+    }
+
+    return (
         <PesquisaContainer>
             <Titulo>Mexer, ou não mexer?</Titulo>
             <Subtitulo>Batido. Não misturado.</Subtitulo>
             <Input
                 placeholder="O que está procurando?"
                 onBlur={evento => {
-                        const textoDigitado = evento.target.value;
-                        const resultadoPesquisa = pocoes.filter( pocao => pocao.nome.includes(textoDigitado))
-                        setPocoesPesquisadas(resultadoPesquisa)
-                }}   
-             />
+                    const textoDigitado = evento.target.value;
+                    const resultadoPesquisa = (pocoes || []).filter(pocao => pocao.nome?.includes(textoDigitado))
+                    setPocoesPesquisadas(resultadoPesquisa)
+                }}
+            />
 
-             { pocoesPesquisadas.map( pocao => (
+            {pocoesPesquisadas.map(pocao => (
                 <Resultado>
-                        <p>{pocao.nome}</p>
-                        <img 
-                                src={pocao.src}
-                                alt="pocao"
-                        />
+                    <p>{pocao.nome}</p>
+                    <img
+                        src={pocao.src}
+                        alt="pocao"
+                    />
                 </Resultado>
-             ) ) }
+            ))}
         </PesquisaContainer>
 
-      
+
     )
 }
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Pesquisa from '../components/Pesquisa';
 import Lore from '../components/Lore';
 
 const AppContainer = styled.div`
