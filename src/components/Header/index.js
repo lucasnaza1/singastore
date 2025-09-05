@@ -2,6 +2,7 @@ import Logo from '../../components/Logo'
 import Paginas from '../../components/Pagina'
 import Icones from '../../components/Icone'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const HeaderContainer = styled.header`
     background-color: #FFF;
@@ -9,13 +10,15 @@ const HeaderContainer = styled.header`
     justify-content: center;
 `
 
-function Header(){
+function Header() {
     return (
-    <HeaderContainer>
-        <Logo/>
-        <Paginas/>
-        <Icones/>
-      </HeaderContainer>
+        <HeaderContainer>
+            <Link to='/'>
+                <Logo />
+            </Link>
+            <Paginas />
+            <Icones />
+        </HeaderContainer>
     )
 }
 
