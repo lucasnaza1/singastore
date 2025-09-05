@@ -31,7 +31,7 @@ root.render(
     <GlobalStyle />
     <BrowserRouter>
       <Routes>
-        <Route path='/Sobre-o-singas' element={<p>Olá, aqui é a história do singas</p>} />
+        <Route path='/ITENS' element={<p>Olá, aqui é a história do singas</p>} />
         <Route path='/' element={<App />} />
       </Routes>
     </BrowserRouter>

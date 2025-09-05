@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const rotasPaginas = ['Sobre o Singas', 'Sobre o desenvolvedor']
+const rotasPaginas = ['ITENS', 'BOLSA']
 
 const PaginasContainer = styled.ul`
      display: flex;
@@ -18,14 +19,16 @@ const PaginaTexto = styled.li`
     cursor: pointer;
 `
 
-function Paginas(){
-    return(
-        <PaginasContainer>
-          {rotasPaginas.map( (rota) => (
-            <PaginaTexto><p>{rota}</p></PaginaTexto>
-          ))}
-        </PaginasContainer>
-    )
+function Paginas() {
+  return (
+    <PaginasContainer>
+      {rotasPaginas.map((rota) => (
+        <Link to={`/${rota.toLowerCase()}`}>
+          <PaginaTexto><p>{rota}</p></PaginaTexto>
+        </Link>
+      ))}
+    </PaginasContainer>
+  )
 }
 
 export default Paginas
