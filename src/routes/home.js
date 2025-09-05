@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Pesquisa from '../components/Pesquisa';
-import UltimosLancamentos from '../components/UltimosLancamentos';
+import Lore from '../components/Lore';
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -14,8 +14,7 @@ const AppContainer = styled.div`
 function Home() {
   return (
     <AppContainer>
-      <Pesquisa />
-      <UltimosLancamentos />
+      <Lore />
     </AppContainer>
   );
 }

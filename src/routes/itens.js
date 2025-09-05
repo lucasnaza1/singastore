@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Pesquisa from '../components/Pesquisa';
+import UltimosLancamentos from '../components/UltimosLancamentos/index'
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -14,6 +15,7 @@ function Itens() {
   return (
     <AppContainer>
       <Pesquisa />
+      <UltimosLancamentos />
     </AppContainer>
   );
 }
