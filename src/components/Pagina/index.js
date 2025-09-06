@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const rotasPaginas = ['ITENS', 'BOLSA']
+const rotasPaginas = ['ITENS', 'FAVORITOS']
 
 const PaginasContainer = styled.ul`
      display: flex;
